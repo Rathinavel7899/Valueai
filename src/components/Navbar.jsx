@@ -67,7 +67,7 @@ const Navbar = () => {
 
         {/* Buy Template Button */}
         <CustomButton variant="contained">
-          Buy templatess
+          Buy template
         </CustomButton>
       </Toolbar>
     </AppBar>
