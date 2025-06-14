@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import createGlobe, { COBEOptions } from "cobe";
@@ -9,8 +11,8 @@ import { cn } from "@/lib/utils";
 const MOVEMENT_DAMPING = 1400;
 
 const GLOBE_CONFIG: COBEOptions = {
-  width: 800,
-  height: 800,
+  width:600,
+  height: 1800,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
@@ -103,7 +105,7 @@ export function Globe({
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px] bg-blue-900 bg-[url('data:image/svg+xml,%3Csvg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Ccircle cx=\"5\" cy=\"5\" r=\"1\" fill=\"white\"/%3E%3C/svg%3E')] bg-cover bg-center",
         className,
       )}
     >
