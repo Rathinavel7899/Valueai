@@ -1,9 +1,9 @@
+
 "use client"
 import { Box, Button, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
-const Container = styled(Box)({
-  // background: 'linear-gradient(180deg, #1e1e2f 0%, #2e2e4f 100%)',
+const Container = styled(Box)(({ theme }) => ({
   backgroundColor: '#1A1A2E',
   minHeight: '100vh',
   display: 'flex',
@@ -13,30 +13,54 @@ const Container = styled(Box)({
   color: 'white',
   textAlign: 'center',
   padding: '0 20px',
-});
+  [theme.breakpoints.down('sm')]: {
+    padding: '20px 10px',
+  },
+}));
 
-const Subtitle = styled(Typography)({
+const Subtitle = styled(Typography)(({ theme }) => ({
   color: '#b0b0d1',
   marginBottom: '10px',
   fontSize: '1.1rem',
-});
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '0.95rem',
+  },
+}));
 
-const MainTitle = styled(Typography)({
-  fontSize: '4rem',
+const MainTitle = styled(Typography)(({ theme }) => ({
+  fontSize: '4.5rem',
   fontWeight: 'bold',
   marginBottom: '30px',
   color: '#e0e0ff',
-});
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '2.2rem',
+  },
+}));
 
-const ButtonContainer = styled(Box)({
+const ButtonContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   gap: '20px',
-});
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '12px',
+  },
+}));
 
-const Started=()=> {
+const Started = () => {
   return (
-    <Container>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '80%', mb: 4 }}>
+    <Container >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '80%',
+          mb: 4,
+          flexDirection: { xs: 'column', sm: 'row' },
+          gap: { xs: 2, sm: 0 },
+          textAlign: { xs: 'left', sm: 'center' },
+        }}
+      >
         <Subtitle>
           Our AI-powered suite of solutions empowers your business with cutting-edge capabilities.
         </Subtitle>
@@ -45,23 +69,27 @@ const Started=()=> {
         </Subtitle>
       </Box>
       <MainTitle>
-        BUILDING AI SOLUTION
+        Transforming Businesses through <br /> AI Innovation
       </MainTitle>
-      <ButtonContainer>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: '#6a4bff',
-              '&:hover': { backgroundColor: '#5a3bff' },
-              borderRadius: '25px',
-              padding: '10px 30px',
-            }}
-          >
-            Get started
-          </Button>
-         
-        </Box>
+      <Box sx={{ maxWidth: 800, px: { xs: 2, sm: 0 } }}>
+        <Typography sx={{ fontSize: { xs: '1rem', sm: '1.4rem' } }}>
+          Value AI helps companies achieve sustainable results through strategic AI implementation. 
+          We combine deep industry expertise with cutting-edge AI solutions to deliver transformative outcomes.
+        </Typography>
+      </Box>
+      <ButtonContainer sx={{ marginTop: 4 }}>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: '#6a4bff',
+            '&:hover': { backgroundColor: '#5a3bff' },
+            borderRadius: '25px',
+            padding: '10px 30px',
+            fontSize: { xs: '0.9rem', sm: '1rem' },
+          }}
+        >
+          Get started
+        </Button>
         <Button
           variant="outlined"
           sx={{
@@ -69,6 +97,7 @@ const Started=()=> {
             borderColor: 'white',
             borderRadius: '25px',
             padding: '10px 30px',
+            fontSize: { xs: '0.9rem', sm: '1rem' },
           }}
         >
           Contact sale
@@ -76,6 +105,6 @@ const Started=()=> {
       </ButtonContainer>
     </Container>
   );
-}
+};
 
-export default Started
+export default Started;
