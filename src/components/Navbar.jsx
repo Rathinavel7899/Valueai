@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState } from 'react'
@@ -8,14 +7,12 @@ import { Container, styled } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 const navItems = [
-  { label: 'Industries', href: '/industries' },
-  { label: 'Services', href: '/services' },
+  { label: 'Features', href: '/features' },
+  { label: 'Technology', href: '/technology' },
   { label: 'About Us', href: '/aboutus' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Jobs', href: '/jobs' }
-]
+];
 
 // Contactus button styled
 const CustomButton = styled(Button)({
@@ -46,7 +43,7 @@ const NavLink = styled(Link)({
   },
 });
 
-// Custom styled link for drawer
+// styled link for drawer
 const DrawerNavLink = styled(Link)({
   color: '#1A1A2E',
   textDecoration: 'none',
@@ -94,56 +91,66 @@ const Navbar = () => {
   );
 
   return (
-    <Container maxWidth={false} disableGutters>
+    <Container maxWidth='xl'>
       <AppBar position="fixed" sx={{ backgroundColor: '#1A1A2E', boxShadow: 'none' }}>
-        <Toolbar sx={{ display: 'flex', alignItems: 'center', padding: { xs: '0 20px', sm: '0 40px' } }}>
-          
-          {/* Logo */}
+        <Toolbar
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: { xs: '0 20px', sm: '0 40px' },
+          }}
+        >
+          {/* Left: Logo + Brand */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Box
-              sx={{
-                width: 30,
-                height: 30,
-                backgroundColor: '#6B48FF',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginRight: '10px',
-              }}
-            >
-              <Typography variant="h6" sx={{ color: '#fff', fontSize: '16px' }}>
-                AI
+            <Link href='/' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+              <Box
+                sx={{
+                  width: 30,
+                  height: 30,
+                  backgroundColor: '#6B48FF',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginRight: '10px',
+                }}
+              >
+                <Typography variant="h6" sx={{ color: '#fff', fontSize: '16px' }}>
+                  VS
+                </Typography>
+              </Box>
+              <Typography variant="h6" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                Value System
               </Typography>
-            </Box>
-            <Typography variant="h6" sx={{ color: '#fff', fontWeight: 'bold' }}>
-              Value AI
-            </Typography>
+            </Link>
           </Box>
 
-          {/* Spacer to push navigation links to the center on larger screens */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }} />
-
-          <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center',textAlign:'center' }}>
+          {/* Center: Navigation Links */}
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 2 }}>
             {navItems.map((item, index) => (
               <NavLink key={index} href={item.href}>
                 {item.label}
               </NavLink>
             ))}
-            <CustomButton variant="contained" href='/contactus'>
-              Contact Us
-            </CustomButton>
           </Box>
 
-          {/* Hamburger Menu Icon for Phone Screens */}
-          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-            <IconButton
-              color="inherit"
-              edge="end"
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
+          {/* Right: Contact Button / Hamburger */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <CustomButton variant="contained" href='/contactus'>
+                Contact Us
+              </CustomButton>
+            </Box>
+            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+              <IconButton
+                color="inherit"
+                edge="end"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

@@ -49,7 +49,7 @@ const ButtonContainer = styled(Box)(({ theme }) => ({
 
 const Started = () => {
   return (
-    <Container >
+    <Container maxWidth='xl'>
       <Box
         sx={{
           display: 'flex',
@@ -69,7 +69,7 @@ const Started = () => {
         </Subtitle>
       </Box>
       <MainTitle>
-        Transforming Businesses through <br /> AI Innovation
+       ValueAI Automations
       </MainTitle>
       <Box sx={{ maxWidth: 800, px: { xs: 2, sm: 0 } }}>
         <Typography sx={{ fontSize: { xs: '1rem', sm: '1.4rem' } }}>

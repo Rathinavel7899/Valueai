@@ -12,6 +12,7 @@ import {
   Zoom
 } from '@mui/material';
 import { styled, keyframes } from '@mui/material/styles';
+import About from '../../../components/About';
 
 // Keyframe animations
 const titleGlow = keyframes`
@@ -285,6 +286,7 @@ const HeroSection = () => {
   };
 
   return (
+     <>
     <HeroContainer>
       {/* Animated Particles */}
       <ParticlesContainer>
@@ -339,7 +341,10 @@ const HeroSection = () => {
           </Box>
         </ContentWrapper>
       </Container>
+      
     </HeroContainer>
+    <About/>
+   </>
   );
 };
 

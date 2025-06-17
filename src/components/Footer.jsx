@@ -6,43 +6,43 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import PhoneIcon from '@mui/icons-material/Phone'
+import StyledContactButton from '../components/ContactButton'
 
 const socialIcons = [
   { icon: <LinkedInIcon />, color: '#0077b5', href: "https://www.linkedin.com" },
   { icon: <TwitterIcon />, color: '#1da1f2', href: "https://twitter.com" },
   { icon: <YouTubeIcon />, color: '#ff0000', href: "https://www.youtube.com" },
-  { icon: <PhoneIcon />, color: '#4caf50', href: "tel:+1234567890" }
+  { icon: <PhoneIcon />, color: '#4caf50', href: "tel:9488943155" }
 ]
 
 const Links = [
   { lin: 'Home', href: "/" },
-  { lin: 'Industries', href: "/industries" },
-  { lin: "Service", href: "/service" },
+  { lin: 'Technology', href: "/technology" },
+  { lin: "Features", href: "/features" },
   { lin: "Blog", href: "/blog" },
   { lin: "About Us", href: "/aboutus" },
-  { lin: 'Job', href: "/job" },
+  // { lin: 'Job', href: "/job" },
 ]
 
 const Footer = () => {
   return (
-    <Container
+    <Container maxWidth='xl'
       sx={{
         backgroundColor: '#1A1A2E',
         display: 'flex',
         flexDirection: { md: 'row', xs: 'column' },
         textAlign: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
       }}
 
-      disableGutters
-      maxWidth={false}
+
     >
       <Box sx={{ color: 'white', padding: { xs: 2, md: 4 } }}>
         <Typography
 
           variant="h6"
           sx={{
-            marginLeft: { xs: 0, md: 0 },
+
             fontWeight: 600,
             marginBottom: { xs: 1, md: 2 },
             marginTop: 2,
@@ -144,31 +144,11 @@ const Footer = () => {
 
         ))}
       </Box>
-      <Box sx={{marginBottom:3}}>
-        <Button
-          variant='contained'
-          sx={{
-            background: 'linear-gradient(45deg, #667eea 0%, #764ba2 100%)',
-            marginTop:{md: 15,xs:1},
-            marginLeft:{md:5,xs:1},
-            color: 'white',
-            px: 4,
-            py: 1.5,
-            borderRadius: 3,
-            textTransform: 'none',
-            fontSize: '1.1rem',
-            fontWeight: 600,
-            boxShadow: '0 4px 15px rgba(102, 126, 234, 0.3)',
-            transition: 'all 0.3s ease',
-            '&:hover': {
-              background: 'linear-gradient(45deg, #764ba2 0%, #667eea 100%)',
-              transform: 'translateY(-2px)',
-              boxShadow: '0 6px 20px rgba(102, 126, 234, 0.4)',
-            }
-          }}
-        >
+      <Box sx={{ marginBottom: 3 }}>
+
+        <StyledContactButton >
           Contact Us
-        </Button>
+        </StyledContactButton>
       </Box>
 
 
