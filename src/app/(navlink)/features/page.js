@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Container, Typography, Box, Card, CardContent, Grid } from '@mui/material';
+import { Container, Typography, Box, Card } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ImageIcon from '@mui/icons-material/Image';
 import BlurOnIcon from '@mui/icons-material/BlurOn';
