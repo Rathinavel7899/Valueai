@@ -15,15 +15,15 @@ const StyledCard = styled(Card)(({ theme }) => ({
   borderRadius: '16px',
   border: '1px solid #3B82F6',
   width: 300,
-  minHeight:200,
-  padding: theme.spacing(2),
+  minHeight: 200,
+  padding: theme.spacing(2), 
   transition: '0.3s ease',
   '&:hover': {
     transform: 'translateY(-5px)',
     borderColor: '#60A5FA',
     backgroundColor: '#2A2E5A',
-  },
-}));
+  }
+}))
 
 const features = {
   imageProcessing: [
