@@ -5,17 +5,14 @@ import { styled } from '@mui/system';
 
 const Container = styled(Box)(({ theme }) => ({
   backgroundColor: '#1A1A2E',
-  minHeight: '100vh',
+  
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
   color: 'white',
   textAlign: 'center',
-  padding: '0 20px',
-  [theme.breakpoints.down('sm')]: {
-    padding: '20px 10px',
-  },
+ 
 }));
 
 const Subtitle = styled(Typography)(({ theme }) => ({
@@ -28,28 +25,29 @@ const Subtitle = styled(Typography)(({ theme }) => ({
 }));
 
 const MainTitle = styled(Typography)(({ theme }) => ({
-  fontSize: '4.5rem',
+  fontSize: 80,
   fontWeight: 'bold',
-  marginBottom: '30px',
+  marginBottom:4,
   color: '#e0e0ff',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2.2rem',
+    fontSize: 50,
+    // marginBottom:3
   },
 }));
 
 const ButtonContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
-  gap: '20px',
+  gap: 20,
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '12px',
+    gap: 20,
   },
 }));
 
 const Started = () => {
   return (
-    <Container sx={{width:'100%'}}>
+    <Container sx={{width:'100%',paddingTop:{md:15,xs:5},paddingBottom:{xs:4,md:4}}}>
       <Box
         sx={{
           display: 'flex',
@@ -72,7 +70,7 @@ const Started = () => {
        ValueAI Automations
       </MainTitle>
       <Box sx={{ maxWidth: 800, px: { xs: 2, sm: 0 } }}>
-        <Typography sx={{ fontSize: { xs: '1rem', sm: '1.4rem' } }}>
+        <Typography sx={{ fontSize: { xs: 20, sm:20} }}>
           Value AI helps companies achieve sustainable results through strategic AI implementation. 
           We combine deep industry expertise with cutting-edge AI solutions to deliver transformative outcomes.
         </Typography>
@@ -83,9 +81,9 @@ const Started = () => {
           sx={{
             backgroundColor: '#6a4bff',
             '&:hover': { backgroundColor: '#5a3bff' },
-            borderRadius: '25px',
-            padding: '10px 30px',
-            fontSize: { xs: '0.9rem', sm: '1rem' },
+            borderRadius: 10,
+            py:2,
+            fontSize: { xs: 10, md:17 },
           }}
         >
           Get started
@@ -95,9 +93,9 @@ const Started = () => {
           sx={{
             color: 'white',
             borderColor: 'white',
-            borderRadius: '25px',
-            padding: '10px 30px',
-            fontSize: { xs: '0.9rem', sm: '1rem' },
+            borderRadius: 10,
+            py: 2,
+               fontSize: { xs: 10, md:17 },
           }}
         >
           Contact sale

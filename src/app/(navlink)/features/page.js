@@ -73,9 +73,9 @@ const features = {
 };
 
 const FeatureSection = ({ title, items }) => (
-  <>
+  <Box >
     <SectionTitle component="h2">{title}</SectionTitle>
-    <Box sx={{ display: 'flex', flexWrap:'wrap', flexDirection:{md:'row',xs:'column'}, gap: 3, justifyContent: 'center', mb: 6 ,px:5}}>
+    <Box sx={{ display: 'flex', flexWrap:'wrap', flexDirection:{md:'row',xs:'column'}, gap: 3, justifyContent: 'center', mb: 6 ,px:{md:5,xs:8}}}>
       {/* <Grid container spacing={2}> */}
       {items.map((item, index) => (
 
@@ -93,15 +93,15 @@ const FeatureSection = ({ title, items }) => (
       ))}
       {/* </Grid> */}
     </Box>
-  </>
+  </Box>
 );
 
 const FeaturesPage = () => {
   return (
-    <Container maxWidth="xl" sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 5 }}>
+    <Box width={"100%"} sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 10 }}>
       <FeatureSection title="Image Processing&Generation" items={features.imageProcessing} />
       <FeatureSection title="Intelligent Data Analysis" items={features.dataAnalysis} />
-    </Container>
+    </Box>
   );
 };
 

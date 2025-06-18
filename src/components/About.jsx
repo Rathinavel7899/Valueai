@@ -117,7 +117,7 @@ const Title = styled(Typography)({
 
 const AboutCards = () => {
   return (
-    <Container maxWidth="xl" sx={{ py: 10, backgroundColor: '#1A1A2E' }}>
+    <Box width={"100%"} sx={{ py: 10, backgroundColor: '#1A1A2E' }}>
       <Title>About Value AI</Title>
       <Grid container spacing={4}>
         {cardData.map((section, index) => (
@@ -135,7 +135,7 @@ const AboutCards = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </Box>
   );
 };
 
