@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Typography,
-  Button,
+  // Button,
   Container,
   useTheme,
   useMediaQuery,
@@ -50,10 +50,10 @@ const float = keyframes`
   50% { transform: translateY(-20px) rotate(180deg); }
 `;
 
-const shimmer = keyframes`
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-`;
+// const shimmer = keyframes`
+//   0% { transform: translateX(-100%); }
+//   100% { transform: translateX(100%); }
+// `;
 
 // Styled components
 const HeroContainer = styled(Box)(({ theme }) => ({
