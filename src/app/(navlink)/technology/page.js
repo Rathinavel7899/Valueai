@@ -73,7 +73,7 @@ const Technology = () => {
       
         <Box sx={{ display: 'flex',  flexDirection:{md:'row',xs:'column'}, justifyContent: 'center', gap: 1 }}>
           {secondLineTools.map((platform, index) => (
-            <TagChip key={index} label={platform} />
+            <TagChip key={index} label={platform}  />
           ))}
         </Box>
         {/* <Box >
