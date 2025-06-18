@@ -1,5 +1,3 @@
-
-
 // "use client";
 
 // import createGlobe, { COBEOptions } from "cobe";
@@ -11,8 +9,8 @@
 // const MOVEMENT_DAMPING = 1400;
 
 // const GLOBE_CONFIG: COBEOptions = {
-//   width:600,
-//   height: 1800,
+//   width: 300, // Reduced default width for smaller screens
+//   height: 300, // Reduced default height for smaller screens
 //   onRender: () => {},
 //   devicePixelRatio: 2,
 //   phi: 0,
@@ -105,7 +103,7 @@
 //   return (
 //     <div
 //       className={cn(
-//         "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px] bg-blue-900 bg-[url('data:image/svg+xml,%3Csvg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Ccircle cx=\"5\" cy=\"5\" r=\"1\" fill=\"white\"/%3E%3C/svg%3E')] bg-cover bg-center",
+//         "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[300px] sm:max-w-[600px] bg-blue-900 bg-[url('data:image/svg+xml,%3Csvg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Ccircle cx=\"5\" cy=\"5\" r=\"1\" fill=\"white\"/%3E%3C/svg%3E')] bg-cover bg-center",
 //         className,
 //       )}
 //     >
@@ -128,6 +126,7 @@
 //     </div>
 //   );
 // }
+
 "use client";
 
 import createGlobe, { COBEOptions } from "cobe";
@@ -149,9 +148,9 @@ const GLOBE_CONFIG: COBEOptions = {
   diffuse: 0.4,
   mapSamples: 16000,
   mapBrightness: 1.2,
-  baseColor: [1, 1, 1],
+  baseColor: [0.15, 0.5, 0.7], // Sea blue color
   markerColor: [251 / 255, 100 / 255, 21 / 255],
-  glowColor: [1, 1, 1],
+  glowColor: [0.8, 0.9, 1], // Light glow effect
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
