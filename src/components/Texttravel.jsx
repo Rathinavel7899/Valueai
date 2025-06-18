@@ -2,11 +2,11 @@
 "use client"
 
 import { TextReveal } from "@/components/magicui/text-reveal"
-import { Container } from "@mui/material"
+import { Box, Container } from "@mui/material"
 
 const Texttravel = () => {
   return (
-    <Container maxWidth={false} disableGutters>
+    <Box width={'100%'}>
 
     
     <div className="flex w-full items-center justify-center bg-[#1A1A2E] backdrop-blur-md py-6 px-4 sm:px-8">
@@ -19,7 +19,7 @@ const Texttravel = () => {
         and valuable to everyone.
       </TextReveal>
     </div>
-    </Container>
+    </Box>
   )
 }
 
