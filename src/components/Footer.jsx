@@ -1,6 +1,6 @@
 
 "use client"
-import { Box, Button, Container, Link, Typography } from '@mui/material'
+import { Box, Link, Typography } from '@mui/material'
 import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
@@ -26,13 +26,18 @@ const Links = [
 
 const Footer = () => {
   return (
-    <Container maxWidth='xl'
+    <Box width={"100%"}
       sx={{
-        backgroundColor: '#1A1A2E',
+        // backgroundColor: '#1A1A2E',
+        backgroundColor: 'rgba(26, 26, 46, 0.9)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
         display: 'flex',
         flexDirection: { md: 'row', xs: 'column' },
         textAlign: 'center',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        borderTopColor: 'blue',
+        border: 2
       }}
 
 
@@ -146,13 +151,13 @@ const Footer = () => {
       </Box>
       <Box sx={{ marginBottom: 3 }}>
 
-        <StyledContactButton >
+        <StyledContactButton href='/contactus' >
           Contact Us
         </StyledContactButton>
       </Box>
 
 
-    </Container>
+    </Box>
   )
 }
 

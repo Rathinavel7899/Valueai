@@ -97,7 +97,7 @@ const DescriptionText = styled(Typography)({
 
 const Blog = () => {
     return (
-        <Container maxWidth="xl" sx={{ backgroundColor: '#1A1A2E', color: 'white', marginTop: { md: 8, xs: 7 } }}>
+        <Box width={"100%"} sx={{ backgroundColor: '#1A1A2E', color: 'white', marginTop: { md: 8, xs: 7 },paddingTop:{md:1,xs:2} }}>
             <SectionTitle component="h1">
                 News about<br /> Value System
             </SectionTitle>
@@ -117,7 +117,7 @@ const Blog = () => {
                     </StyledCard>
                 ))}
             </Box>
-        </Container>
+        </Box>
     );
 };
 

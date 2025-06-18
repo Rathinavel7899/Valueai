@@ -89,7 +89,7 @@ const Particle = styled(Box)(({ delay, duration }) => ({
 }));
 
 const MainTitle = styled(Typography)(({ theme }) => ({
-  fontSize: 'clamp(2.5rem, 8vw, 8rem)',
+  fontSize: 'clamp(2.5rem, 6vw, 6rem)',
   fontWeight: 700,
   lineHeight: 1.1,
   marginBottom: theme.spacing(4),

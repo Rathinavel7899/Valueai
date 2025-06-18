@@ -52,7 +52,7 @@ const TagChip = styled(Chip)({
 
 const Technology = () => {
   return (
-    <Container maxWidth="xl" sx={{  backgroundColor: '#1A1A2E', color: 'white', padding: '64px 0' }}>
+    <Box width={"100%"} sx={{  backgroundColor: '#1A1A2E', color: 'white', padding: '64px 0' }}>
       <SectionTitle>
         Technology Stack
       </SectionTitle>
@@ -117,7 +117,7 @@ const Technology = () => {
             </Grid>
         </Box> */}
       </Box>
-    </Container>
+    </Box>
   );
 };
 

@@ -65,7 +65,7 @@ const Navbar = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  // Drawer content for mobile menu
+
   const drawer = (
     <Box sx={{ width: 250, bgcolor: '#fff', height: '100%' }}>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
@@ -91,8 +91,18 @@ const Navbar = () => {
   );
 
   return (
-    <Container maxWidth='xl'>
-      <AppBar position="fixed" sx={{ backgroundColor: '#1A1A2E', boxShadow: 'none' }}>
+    <Box width={"100%"}>
+      
+      <AppBar
+  position="fixed"
+  sx={{
+    backgroundColor: 'rgba(16, 16, 20, 0.7)', 
+    backdropFilter: 'blur(8px)',             
+    WebkitBackdropFilter: 'blur(8px)',       
+    boxShadow: 'none',
+  }}
+>
+
         <Toolbar
           sx={{
             display: 'flex',
@@ -101,7 +111,7 @@ const Navbar = () => {
             padding: { xs: '0 20px', sm: '0 40px' },
           }}
         >
-          {/* Left: Logo + Brand */}
+ 
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link href='/' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
               <Box
@@ -126,7 +136,7 @@ const Navbar = () => {
             </Link>
           </Box>
 
-          {/* Center: Navigation Links */}
+   
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 2 }}>
             {navItems.map((item, index) => (
               <NavLink key={index} href={item.href}>
@@ -135,7 +145,7 @@ const Navbar = () => {
             ))}
           </Box>
 
-          {/* Right: Contact Button / Hamburger */}
+      
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <CustomButton variant="contained" href='/contactus'>
@@ -155,7 +165,6 @@ const Navbar = () => {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer for Mobile Menu */}
       <Drawer
         anchor="right"
         open={mobileOpen}
@@ -167,7 +176,7 @@ const Navbar = () => {
       >
         {drawer}
       </Drawer>
-    </Container>
+    </Box>
   );
 };
 
