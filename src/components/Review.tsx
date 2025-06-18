@@ -4,44 +4,7 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import { Box, Typography } from "@mui/material";
 
-// const reviews = [
-//   {
-//     name: "RVP",
-//     username: "@rvp",
-//     body: "I've never seen anything like this before. It's amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jack",
-//   },
-//   {
-//     name: "MAHi BHAI",
-//     username: "@MS",
-//     body: "I don't know what to say. I'm speechless. This is amazing.",
-//     img: "https://avatar.vercel.sh/jill",
-//   },
-//   {
-//     name: "Faf Duplesis",
-//     username: "@faf",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/john",
-//   },
-//   {
-//     name: "AB Devilliers",
-//     username: "@AB De",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jane",
-//   },
-//   {
-//     name: "Kiren Pollard",
-//     username: "@pollard",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jenny",
-//   },
-//   {
-//     name: "Hardik Pandya",
-//     username: "@hardik",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/james",
-//   },
-// ];
+
 const reviews = [
   {
     name: "RVP",
