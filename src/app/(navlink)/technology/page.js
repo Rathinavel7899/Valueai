@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { Container, Typography, Box, Chip } from '@mui/material'
+import {  Typography, Box, Chip } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import SectionTitle from '../../../components/SectionTitle'
 
