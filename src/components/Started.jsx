@@ -49,7 +49,7 @@ const ButtonContainer = styled(Box)(({ theme }) => ({
 
 const Started = () => {
   return (
-    <Container maxWidth='xl'>
+    <Container sx={{width:'100%'}}>
       <Box
         sx={{
           display: 'flex',
