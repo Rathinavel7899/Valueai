@@ -16,14 +16,14 @@ const navItems = [
 
 // Contactus button styled
 const CustomButton = styled(Button)({
-  backgroundColor: '#6B48FF',
+  backgroundColor: '#8744ed',
   color: '#fff',
   borderRadius: '20px',
   padding: '8px 20px',
   textTransform: 'none',
   fontWeight: 'bold',
   '&:hover': {
-    backgroundColor: '#5a3ed6',
+    backgroundColor: '#9e69f1',
   },
 });
 
@@ -96,7 +96,7 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: 'rgba(16, 16, 20, 0.7)',
+          backgroundColor: 'rgba(16, 16, 20, 0.9)',
           backdropFilter: 'blur(8px)',
           WebkitBackdropFilter: 'blur(8px)',
           boxShadow: 'none',

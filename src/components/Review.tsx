@@ -2,7 +2,7 @@
 "use client"
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import { Box,  Typography } from "@mui/material";
+import { Box,  Container,  Typography } from "@mui/material";
 
 
 const reviews = [
@@ -96,9 +96,10 @@ const ReviewCard = ({
 
 const Review = () => {
   return (
-    <Box width={"100%"}  sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 6,px:5 }}>
+     <Box sx={{ width: '100%', mx: 0, backgroundColor: '#1A1A2E',color: 'white',}}>
+    <Container    sx={{width:"100%",  py: 6,px:5 }}>
       <Typography
-        // variant="h4"
+       
         component="h2"
         sx={{
           fontWeight: 'bold',
@@ -122,6 +123,7 @@ const Review = () => {
           ))}
         </Marquee>
       </div>
+    </Container>
     </Box>
   );
 };
