@@ -56,7 +56,8 @@ const ButtonContainer = styled(Box)(({ theme }) => ({
 
 const Home = () => {
   return (
-    <Container maxWidth="xl" sx={{ width: '100%', paddingTop: { md: 10, xs: 5 }, paddingBottom: { xs: 4, md: 4 }, marginTop: { md: 8, xs: 6.5 } }}>
+    <Box sx={{ width: '100%', mx: 0 }}>
+    <Container sx={{ width: '100%', paddingTop: { md: 8, xs: 5 }, paddingBottom: { xs: 4, md: 4 }, marginTop: { md: 8, xs: 6.5 } }}>
 
       <Box
         sx={{
@@ -222,6 +223,7 @@ const Home = () => {
         </Box>
       </Box>
     </Container>
+    </Box>
   );
 };
 

@@ -98,7 +98,7 @@ const FeatureSection = ({ title, items }) => (
 
 const FeaturesPage = () => {
   return (
-    <Box width={"100%"} sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 10 }}>
+    <Box width={"100%"} sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 8 }}>
       <FeatureSection title="Image Processing&Generation" items={features.imageProcessing} />
       <FeatureSection title="Intelligent Data Analysis" items={features.dataAnalysis} />
     </Box>

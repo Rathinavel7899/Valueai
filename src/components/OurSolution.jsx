@@ -422,7 +422,7 @@ const OurSolution = () => {
                   <CardHeader
                     title={
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-                        <Box sx={{ p: 1, borderRadius: 2, bgcolor: 'primary.main' }}>
+                        <Box sx={{ p: 1, borderRadius: 2, bgcolor:'#8744ed' }}>
                           <IconComponent sx={{ fontSize: 24, color: 'white' }} />
                         </Box>
                         <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
@@ -447,7 +447,7 @@ const OurSolution = () => {
                             borderRadius: 10,
                             p: 1,
                             fontSize: 13,
-                            '&:hover': { bgcolor: 'primary.dark' },
+                            '&:hover': { bgcolor: '#8744ed' },
                           }}
                         />
                       ))}
