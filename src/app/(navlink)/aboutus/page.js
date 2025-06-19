@@ -3,12 +3,11 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Typography,
-  // Button,
   Container,
   useTheme,
   useMediaQuery,
   Fade,
-  // Grow,
+
   Zoom
 } from '@mui/material';
 import { styled, keyframes } from '@mui/material/styles';
@@ -50,10 +49,6 @@ const float = keyframes`
   50% { transform: translateY(-20px) rotate(180deg); }
 `;
 
-// const shimmer = keyframes`
-//   0% { transform: translateX(-100%); }
-//   100% { transform: translateX(100%); }
-// `;
 
 // Styled components
 const HeroContainer = styled(Box)(({ theme }) => ({
@@ -175,52 +170,6 @@ const OrbSegment = styled(Box)(({ delay }) => ({
   animationDelay: `${delay}s`,
 }));
 
-// const StyledButton = styled(Button)(({ theme }) => ({
-//   marginTop: theme.spacing(6),
-//   padding: theme.spacing(2, 5),
-//   background: 'linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)',
-//   borderRadius: 50,
-//   fontSize: '1.1rem',
-//   fontWeight: 600,
-//   textTransform: 'none',
-//   position: 'relative',
-//   overflow: 'hidden',
-//   transition: 'all 0.3s ease',
-//   color: 'white',
-//   border: 'none',
-//   boxShadow: '0 4px 15px rgba(147, 51, 234, 0.3)',
-//   '&:hover': {
-//     transform: 'translateY(-3px)',
-//     boxShadow: '0 10px 30px rgba(147, 51, 234, 0.5)',
-//     background: 'linear-gradient(135deg, #8b5cf6 0%, #5b21b6 100%)',
-//   },
-//   '&:active': {
-//     transform: 'translateY(-1px)',
-//   },
-//   '&::before': {
-//     content: '""',
-//     position: 'absolute',
-//     top: 0,
-//     left: '-100%',
-//     width: '100%',
-//     height: '100%',
-//     background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)',
-//     transition: 'left 0.5s',
-//   },
-//   '&:hover::before': {
-//     animation: `${shimmer} 0.5s ease-in-out`,
-//   },
-// }));
-
-// const SubTitle = styled(Typography)(({ theme }) => ({
-//   fontSize: 'clamp(1.2rem, 3vw, 2rem)',
-//   color: 'rgba(255, 255, 255, 0.8)',
-//   fontWeight: 300,
-//   marginTop: theme.spacing(4),
-//   marginBottom: theme.spacing(2),
-//   textAlign: 'center',
-// }));
-
 const ContentWrapper = styled(Box)({
   position: 'relative',
   zIndex: 2,
@@ -279,11 +228,7 @@ const HeroSection = () => {
     setMousePosition({ x: 0, y: 0 });
   };
 
-  // const handleGetStarted = () => {
-  //   // Add your navigation logic here
-  //   console.log('Get Started clicked');
-  //   // Example: router.push('/signup') or window.location.href = '/signup'
-  // };
+ 
 
   return (
      <>
