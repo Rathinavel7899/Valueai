@@ -2,7 +2,7 @@
 "use client"
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import { Box, Typography } from "@mui/material";
+import { Box,  Typography } from "@mui/material";
 
 
 const reviews = [
@@ -65,9 +65,9 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-40 w-84 cursor-pointer overflow-hidden rounded-xl border p-4 transition-transform duration-300 hover:rotate-3",
+        "relative h-40 w-84 cursor-pointer overflow-hidden rounded-xl border p-4 transition-transform duration-300 hover:rotate-0",
         // light styles
-        "border-blue-950/[.1] bg-gray-900 hover:bg-gray-600",
+        "border-blue-950/[.1] bg-gray-900 hover:bg-gray-800",
         // dark styles
         isFirstRow
           ? "dark:border-cyan-400 dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -96,7 +96,7 @@ const ReviewCard = ({
 
 const Review = () => {
   return (
-    <Box width="100%" sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 6 }}>
+    <Box width={"100%"}  sx={{ backgroundColor: '#1A1A2E', color: 'white', py: 6,px:5 }}>
       <Typography
         // variant="h4"
         component="h2"

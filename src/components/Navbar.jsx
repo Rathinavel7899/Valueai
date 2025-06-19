@@ -91,17 +91,17 @@ const Navbar = () => {
   );
 
   return (
-    <Box width={"100%"}>
-      
+    <Container maxWidth='xl'>
+
       <AppBar
-  position="fixed"
-  sx={{
-    backgroundColor: 'rgba(16, 16, 20, 0.7)', 
-    backdropFilter: 'blur(8px)',             
-    WebkitBackdropFilter: 'blur(8px)',       
-    boxShadow: 'none',
-  }}
->
+        position="fixed"
+        sx={{
+          backgroundColor: 'rgba(16, 16, 20, 0.7)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          boxShadow: 'none',
+        }}
+      >
 
         <Toolbar
           sx={{
@@ -111,7 +111,7 @@ const Navbar = () => {
             padding: { xs: '0 20px', sm: '0 40px' },
           }}
         >
- 
+
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link href='/' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
               <Box
@@ -136,7 +136,7 @@ const Navbar = () => {
             </Link>
           </Box>
 
-   
+
           <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 2 }}>
             {navItems.map((item, index) => (
               <NavLink key={index} href={item.href}>
@@ -145,7 +145,7 @@ const Navbar = () => {
             ))}
           </Box>
 
-      
+
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <CustomButton variant="contained" href='/contactus'>
@@ -176,7 +176,7 @@ const Navbar = () => {
       >
         {drawer}
       </Drawer>
-    </Box>
+    </Container>
   );
 };
 
